@@ -56,3 +56,24 @@ h3{
     margin-block: 12px;
     font-weight: bold;
 }
+@media (max-width: 768px) {
+    .cards{
+ width: 90%;
+
+}
+.card{
+
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+ .card-info{
+    flex-direction: column;
+    
+ }
+ .buttons{
+flex-wrap: wrap;
+ }
+}
