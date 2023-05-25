@@ -6,19 +6,19 @@ import "./Jobs.css";
 const Jobs = () => {
 
   const [jobs, setJobs] = useState(data);
-  const filteredItems = []
-  const filterRole = (role, event) => {
+
+  const filterRole = (role) => {
     setJobs(data.filter(job => job.role === role))
-    filteredItems.push(event.target.innerText)
+   
   }
-  const filterLevel = (level, event) => {
+  const filterLevel = (level) => {
     setJobs(data.filter(job => job.level === level))
-     filteredItems.push(event.target.innerText);
+     
   }
   const filterLanguage = (language) => {
     setJobs(data.forEach( item =>item.language.filter(value => value === language)))
   }
-console.log(filteredItems)
+
   return (
     <main>
       <div className="cards">
