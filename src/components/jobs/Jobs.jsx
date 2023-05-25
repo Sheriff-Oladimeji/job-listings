@@ -16,7 +16,7 @@ const Jobs = () => {
                 <div className="card-tags">
                   <h4>{job.company}</h4>
                   <p className="new">{job.new ? "New!" : null}</p>
-                  <p className="featured">{job.featured ? "Featured" : null}</p>
+                  <p className="featured">{job.featured ? "Featured" :null}</p>
                 </div>
                 <h3>{job.position}</h3>
                 <div className="card-about">

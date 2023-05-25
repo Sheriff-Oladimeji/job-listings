@@ -37,7 +37,7 @@ img{
 h4{
 color: $DesaturatedDarkCyan;
 font-weight: 700;
-font-size: 20px;
+font-size: 16px;
 }
 .new, .featured{
     background-color: $DesaturatedDarkCyan;
@@ -50,4 +50,9 @@ font-size: 20px;
 .featured{
     background-color: $VeryDarkGrayishCyan;
     
+}
+h3{
+    font-size: 20px;
+    margin-block: 12px;
+    font-weight: bold;
 }
