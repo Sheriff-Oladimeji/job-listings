@@ -1,11 +1,14 @@
+import { useState } from "react";
 import data from "../../data/data.json";
 import Button from "../button/Button";
+
 import "./Jobs.css"
 const Jobs = () => {
+  const [jobs, setJobs] = useState(data)
   return (
     <main>
       <div className="cards">
-        {data.map((job) => (
+        {jobs.map((job) => (
           <section
             key={job.id}
             className={`card ${job.featured ? "card-new" : ""}`}
