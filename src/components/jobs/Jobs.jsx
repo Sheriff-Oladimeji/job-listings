@@ -8,6 +8,13 @@ const Jobs = () => {
   const filterRole = (role) => {
     setJobs(data.filter(job => job.role === role))
   }
+  const filterLevel = (level) => {
+    setJobs(data.filter(job => job.level === level))
+  }
+  const filterLanguage = (language) => {
+    setJobs(data.map(item =>item.languages.filter(value => value === language)))
+  }
+
   return (
     <main>
       <div className="cards">
@@ -33,9 +40,9 @@ const Jobs = () => {
             </div>
             <div className="buttons">
               <Button value={job.role} changeValue={()=> filterRole(job.role)}/>
-              <Button value={job.level} />
+              <Button value={job.level} changeValue={()=> filterLevel(job.level)} />
               {job.languages.map((language) => (
-                <Button value={language} key={job.id} />
+                <Button value={language} key={job.id} changeValue={()=> filterLanguage(language)}/>
               ))}
               {job.tools.map((tool) => (
                 <Button value={tool} key={job.id} />
