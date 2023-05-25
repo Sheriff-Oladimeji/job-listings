@@ -5,4 +5,5 @@ button {
   padding: 8px;
   border-radius: 5px;
   background-color: hsl(180, 52%, 96%);
+  cursor: pointer;
 }/*# sourceMappingURL=Button.css.map */
