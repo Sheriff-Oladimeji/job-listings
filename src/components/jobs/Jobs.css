@@ -1,0 +1,17 @@
+main {
+  background-color: hsl(180, 52%, 96%);
+}
+
+.cards {
+  width: 80%;
+  margin-inline: auto;
+  padding-block: 30px;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 10px 10px 5px 0px rgba(189, 189, 189, 0.3);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(189, 189, 189, 0.3);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(189, 189, 189, 0.3);
+  margin-bottom: 20px;
+}/*# sourceMappingURL=Jobs.css.map */

@@ -1,11 +1,12 @@
-import data from "../data/data.json";
+import data from "../../data/data.json";
 import Button from "../button/Button";
+import "./Jobs.css"
 const Jobs = () => {
   return (
     <main>
-      <div>
+      <div className="cards">
         {data.map((job) => (
-          <section key={job.id}>
+          <section key={job.id} className="card">
             <div>
               <img src={job.logo} alt="" />
               <div>
