@@ -39,3 +39,15 @@ color: $DesaturatedDarkCyan;
 font-weight: 700;
 font-size: 20px;
 }
+.new, .featured{
+    background-color: $DesaturatedDarkCyan;
+    color: $LightGrayishCyan;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.featured{
+    background-color: $VeryDarkGrayishCyan;
+    
+}
