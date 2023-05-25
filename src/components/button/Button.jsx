@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import "./Button.css"
 
-const Button = ({value}) => {
+const Button = ({value, changeValue}) => {
   return (
-      <button>{value}</button>
+      <button onClick={changeValue}>{value}</button>
   )
 }
 

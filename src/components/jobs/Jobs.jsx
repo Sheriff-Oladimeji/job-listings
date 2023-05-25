@@ -2,9 +2,12 @@ import { useState } from "react";
 import data from "../../data/data.json";
 import Button from "../button/Button";
 
-import "./Jobs.css"
+import "./Jobs.css";
 const Jobs = () => {
-  const [jobs, setJobs] = useState(data)
+  const [jobs, setJobs] = useState(data);
+  const filterRole = (role) => {
+    setJobs(data.filter(job => job.role === role))
+  }
   return (
     <main>
       <div className="cards">
@@ -29,7 +32,7 @@ const Jobs = () => {
               </div>
             </div>
             <div className="buttons">
-              <Button value={job.role} />
+              <Button value={job.role} changeValue={()=> filterRole(job.role)}/>
               <Button value={job.level} />
               {job.languages.map((language) => (
                 <Button value={language} key={job.id} />
