@@ -28,6 +28,9 @@ const Jobs = () => {
               {job.languages.map((language) => (
                 <Button value={language} key={job.id} />
               ))}
+                    {job.tools.map(tool => (
+                        <Button value={tool} key={job.id}/>
+                    ))}
             </div>
           </section>
         ))}
