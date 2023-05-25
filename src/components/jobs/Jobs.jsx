@@ -12,7 +12,7 @@ const Jobs = () => {
           >
             <div className="card-info">
               <img src={job.logo} alt="" />
-              <div>
+              <div className="content">
                 <div className="card-tags">
                   <h4>{job.company}</h4>
                   {job.new == true && <p className="new">New!</p>}

@@ -68,12 +68,23 @@ h3{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    margin-top: 60px;
 }
  .card-info{
     flex-direction: column;
+    position: relative;
     
+ }
+ .content{
+    padding-top: 35px;
  }
  .buttons{
 flex-wrap: wrap;
+ }
+ img{
+    position: absolute;
+    top: -50%;
+   left: 5px;
+   width: 30%;
  }
 }
