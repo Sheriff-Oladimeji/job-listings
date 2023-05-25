@@ -7,7 +7,7 @@ const Jobs = () => {
       <div className="cards">
         {data.map((job) => (
           <section key={job.id} className="card">
-            <div>
+            <div className="card-info">
               <img src={job.logo} alt="" />
               <div>
                 <div>
