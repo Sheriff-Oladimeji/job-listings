@@ -38,4 +38,10 @@ img {
 
 .card-about {
   color: hsl(180, 8%, 52%);
+}
+
+h4 {
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  font-size: 20px;
 }/*# sourceMappingURL=Jobs.css.map */
