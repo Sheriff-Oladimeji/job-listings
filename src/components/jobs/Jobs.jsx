@@ -6,16 +6,19 @@ import "./Jobs.css";
 const Jobs = () => {
 
   const [jobs, setJobs] = useState(data);
-  const filterRole = (role) => {
+  const filteredItems = []
+  const filterRole = (role, event) => {
     setJobs(data.filter(job => job.role === role))
+    filteredItems.push(event.target.innerText)
   }
-  const filterLevel = (level) => {
+  const filterLevel = (level, event) => {
     setJobs(data.filter(job => job.level === level))
+     filteredItems.push(event.target.innerText);
   }
   const filterLanguage = (language) => {
     setJobs(data.forEach( item =>item.language.filter(value => value === language)))
   }
-
+console.log(filteredItems)
   return (
     <main>
       <div className="cards">
@@ -42,11 +45,11 @@ const Jobs = () => {
             <div className="buttons">
               <Button value={job.role} changeValue={()=> filterRole(job.role)}/>
               <Button value={job.level} changeValue={()=> filterLevel(job.level)} />
-              {job.languages.map((language) => (
-                <Button value={language} key={job.id} changeValue={()=> filterLanguage(language)}/>
+              {job.languages.map((language, index) => (
+                <Button value={language} key={index} changeValue={()=> filterLanguage(language)}/>
               ))}
-              {job.tools.map((tool) => (
-                <Button value={tool} key={job.id} />
+              {job.tools.map((tool, index) => (
+                <Button value={tool} key={index} />
               ))}
             </div>
           </section>
