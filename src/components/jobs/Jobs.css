@@ -29,9 +29,13 @@ main {
 .card-info, .card-about, .card-tags, .buttons {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
 }
 
 img {
   width: 25%;
+}
+
+.card-about {
+  color: hsl(180, 8%, 52%);
 }/*# sourceMappingURL=Jobs.css.map */

@@ -26,8 +26,11 @@ main{
 .card-info, .card-about, .card-tags, .buttons{
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
 }
 img{
     width: 25%;
+}
+.card-about{
+    color: $DarkGrayishCyan;
 }
