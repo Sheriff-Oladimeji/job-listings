@@ -1,0 +1,9 @@
+@import "../variables/Variables.scss";
+button{
+    border: none;
+    outline: none;
+    color: $DesaturatedDarkCyan;
+    padding: 8px;
+    border-radius: 5px;
+    background-color:  $LightGrayishCyanBg;
+}
