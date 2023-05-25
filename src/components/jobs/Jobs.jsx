@@ -4,6 +4,7 @@ import Button from "../button/Button";
 
 import "./Jobs.css";
 const Jobs = () => {
+
   const [jobs, setJobs] = useState(data);
   const filterRole = (role) => {
     setJobs(data.filter(job => job.role === role))
@@ -12,7 +13,7 @@ const Jobs = () => {
     setJobs(data.filter(job => job.level === level))
   }
   const filterLanguage = (language) => {
-    setJobs(data.map(item =>item.languages.filter(value => value === language)))
+    setJobs(data.forEach( item =>item.language.filter(value => value === language)))
   }
 
   return (

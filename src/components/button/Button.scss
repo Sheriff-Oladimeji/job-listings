@@ -7,4 +7,9 @@ button{
     border-radius: 5px;
     background-color:  $LightGrayishCyanBg;
     cursor: pointer;
+
+}
+button:hover , button:active{
+    background-color: $DesaturatedDarkCyan;
+    color: white;
 }

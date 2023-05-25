@@ -6,4 +6,9 @@ button {
   border-radius: 5px;
   background-color: hsl(180, 52%, 96%);
   cursor: pointer;
+}
+
+button:hover, button:active {
+  background-color: hsl(180, 29%, 50%);
+  color: white;
 }/*# sourceMappingURL=Button.css.map */
