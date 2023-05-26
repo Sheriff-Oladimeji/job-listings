@@ -138,7 +138,7 @@ const data = [
   {
     "id": 10,
     "company": "The Air Filter Company",
-    "logo": images.shortly,
+    "logo": images.airFlter,
     "new": false,
     "featured": false,
     "position": "Front-end Dev",

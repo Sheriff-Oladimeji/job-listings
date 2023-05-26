@@ -4,23 +4,25 @@ import Button from "../button/Button";
 
 import "./Jobs.css";
 const Jobs = () => {
-
   const [jobs, setJobs] = useState(data);
 
   const filterRole = (role) => {
-    setJobs(data.filter(job => job.role === role))
-   
-  }
+    setJobs(data.filter((job) => job.role === role));
+  };
   const filterLevel = (level) => {
-    setJobs(data.filter(job => job.level === level))
-     
-  }
+    setJobs(data.filter((job) => job.level === level));
+  };
   const filterLanguage = (language) => {
-    setJobs(data.forEach( item =>item.language.filter(value => value === language)))
-  }
+    setJobs(
+      data.forEach((item) =>
+        item.language.filter((value) => value === language)
+      )
+    );
+  };
 
   return (
     <main>
+      =
       <div className="cards">
         {jobs.map((job) => (
           <section
@@ -43,10 +45,22 @@ const Jobs = () => {
               </div>
             </div>
             <div className="buttons">
-              <Button value={job.role} changeValue={()=> filterRole(job.role)}/>
-              <Button value={job.level} changeValue={()=> filterLevel(job.level)} />
+              <Button
+                value={job.role}
+                changeValue={() => {
+                  filterRole(job.role);
+                }}
+              />
+              <Button
+                value={job.level}
+                changeValue={() => filterLevel(job.level)}
+              />
               {job.languages.map((language, index) => (
-                <Button value={language} key={index} changeValue={()=> filterLanguage(language)}/>
+                <Button
+                  value={language}
+                  key={index}
+                  changeValue={() => filterLanguage(language)}
+                />
               ))}
               {job.tools.map((tool, index) => (
                 <Button value={tool} key={index} />
