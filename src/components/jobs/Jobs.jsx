@@ -22,7 +22,7 @@ const Jobs = () => {
 
   return (
     <main>
-      =
+    
       <div className="cards">
         {jobs.map((job) => (
           <section
