@@ -1,8 +1,9 @@
-[
+
+const data = [
   {
     "id": 1,
     "company": "Photosnap",
-    "logo": "../assets/photosnap.svg",
+    "logo": "./src/assets/photosnap.svg",
     "new": true,
     "featured": true,
     "position": "Senior Frontend Developer",
@@ -150,3 +151,4 @@
     "tools": ["React", "Sass"]
   }
 ]
+export default data

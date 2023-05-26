@@ -8,4 +8,6 @@ import shortly from "./shortly.svg"
 import insure from "./insure.svg"
 import eyecam from "./eyecam-co.svg"
 import airFlter from "./the-air-filter-company.svg"
-export{photosnap, manage, account, myhome, loopStudios, faceit, shortly, insure, eyecam,airFlter}
+const images = { photosnap, manage, account, myhome, loopStudios, faceit, shortly, insure, eyecam, airFlter }
+
+export default images
