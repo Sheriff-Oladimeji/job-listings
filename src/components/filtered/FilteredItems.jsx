@@ -1,9 +1,16 @@
 import "./filteredItems.css";
-
+import { useSelector } from "react-redux";
 const FilteredItems = () => {
+    const jobs = useSelector((state) => state.user.value);
   return (
     <div className="filter-values">
-      <div></div>
+          <div>
+              {jobs.map((job, index) => (
+                  <div key={index}>
+                      <p>{job}</p>  
+                  </div>
+              ))}
+      </div>
       <button>Clear</button>
     </div>
   );
