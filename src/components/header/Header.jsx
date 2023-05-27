@@ -1,12 +1,9 @@
-
+import FilteredItems from "../filtered/filteredItems";
 import "./Header.css"
 const Header = () => {
     return (
       <header className="container">
-        {/* <div className="filter-values">
-          <input type="text" />
-          <button>Clear</button>
-        </div> */}
+    <FilteredItems/>
       </header>
     );
 }
