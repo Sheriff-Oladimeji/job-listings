@@ -1,4 +1,4 @@
-
+import "./filteredItems.css";
 
 const FilteredItems = () => {
   return (
@@ -7,6 +7,6 @@ const FilteredItems = () => {
       <button>Clear</button>
     </div>
   );
-}
+};
 
-export default FilteredItems
+export default FilteredItems;
