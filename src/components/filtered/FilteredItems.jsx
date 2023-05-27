@@ -1,7 +1,7 @@
 import "./filteredItems.css";
 import { useSelector } from "react-redux";
 const FilteredItems = () => {
-    const jobs = useSelector((state) => state.user.value);
+    const jobs = useSelector((state) => state.filter.value);
   return (
     <div className="filter-values">
           <div>

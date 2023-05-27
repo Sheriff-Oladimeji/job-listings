@@ -1,11 +1,12 @@
 import { useState } from "react";
 import data from "../../data/data";
 import Button from "../button/Button";
-
+import { useDispatch } from "react-redux";
 import "./Jobs.css";
+import { filterClick } from "../../features/filter";
 const Jobs = () => {
   const [jobs, setJobs] = useState(data);
-
+  const dispatch = useDispatch([]);
   const filterRole = (role) => {
     setJobs(data.filter((job) => job.role === role));
   };
@@ -22,7 +23,6 @@ const Jobs = () => {
 
   return (
     <main>
-    
       <div className="cards">
         {jobs.map((job) => (
           <section
@@ -47,13 +47,17 @@ const Jobs = () => {
             <div className="buttons">
               <Button
                 value={job.role}
-                changeValue={() => {
+                changeValue={(event) => {
                   filterRole(job.role);
+                  dispatch(filterClick(event.target.innerText));
                 }}
               />
               <Button
                 value={job.level}
-                changeValue={() => filterLevel(job.level)}
+                changeValue={(event) => {
+                  filterLevel(job.level);
+                  dispatch(filterClick(event.target.innerText));
+                }}
               />
               {job.languages.map((language, index) => (
                 <Button
