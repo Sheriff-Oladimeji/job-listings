@@ -1,13 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
-const initialStateValue  = []
+const initialState = { myArray: [] };
 export const filterSlice = createSlice({
-    name: "filter",
-    initialState: { value: initialStateValue },
-    reducers: {
-        filterClick: (state, action) => {
-            state.value =  action.payload;
-        }
-    }
-})
-export const {filterClick} = filterSlice.actions
-export default filterSlice.reducer 
+  name: "filter",
+initialState,
+  reducers: {
+    filterClick: (state, action) => {
+          if (!state.myArray.includes(action.payload)) {
+        state.myArray.push(action.payload);
+   }
+    },
+  },
+});
+export const { filterClick } = filterSlice.actions;
+export default filterSlice.reducer;
