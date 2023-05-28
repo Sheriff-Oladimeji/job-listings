@@ -1,5 +1,7 @@
 @import "../variables/Variables.scss";
-
+.hidden{
+  display: none;
+}
 .filter-container {
   width: 80%;
   margin-inline: auto;
@@ -12,6 +14,7 @@ height: 80px;
 display: flex;
 justify-content: space-between;
 padding-inline: 20px;
+flex-wrap: wrap;
 }
 
 
@@ -23,7 +26,7 @@ padding-inline: 20px;
 }
 .filter-values{
     display: flex;
- 
+ flex-wrap: wrap;
      padding: 10px;
   background-color: transparent;
   border: none;
