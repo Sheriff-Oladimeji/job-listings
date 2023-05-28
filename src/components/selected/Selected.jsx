@@ -1,7 +1,8 @@
 import "./Selected.css";
 import { useSelector } from "react-redux";
 const Selected = () => {
-  const jobs = useSelector((state) => state.filter.myArray);
+  let jobs = useSelector((state) => state.filter.myArray);
+  console.log(jobs)
 
   return (
     <div className="filter-container">
@@ -13,7 +14,7 @@ const Selected = () => {
           </div>
         ))}
       </div>
-      <button>Clear</button>
+      <button >Clear</button>
     </div>
   );
 };

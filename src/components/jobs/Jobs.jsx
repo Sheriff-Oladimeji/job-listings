@@ -14,11 +14,7 @@ const Jobs = () => {
     setJobs(data.filter((job) => job.level === level));
   };
   const filterLanguage = (language) => {
-    setJobs(
-      data.forEach((item) =>
-        item.language.filter((value) => value === language)
-      )
-    );
+   data.map((obj) => obj.languages.filter(value => value === language) )
   };
 
   return (
@@ -63,7 +59,9 @@ const Jobs = () => {
                 <Button
                   value={language}
                   key={index}
-                  changeValue={() => filterLanguage(language)}
+                  changeValue={() => {
+                    filterLanguage(language)
+                  }}
                 />
               ))}
               {job.tools.map((tool, index) => (
