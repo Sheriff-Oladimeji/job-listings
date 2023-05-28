@@ -67,7 +67,7 @@ const Jobs = () => {
                       value={language}
                       changeValue={(event) => {
                         filterLanguage(language);
-                        console.log(event.target.innerText);
+                       dispatch(filterClick(event.target.innerText));
                       }}
                     />
                   </div>
@@ -79,7 +79,7 @@ const Jobs = () => {
                       value={tool}
                       changeValue={(event) => {
                         filterTools(tool);
-                        console.log(event.target.innerText);
+                        dispatch(filterClick(event.target.innerText));
                       }}
                     />
                   </div>
