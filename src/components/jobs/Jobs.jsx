@@ -6,7 +6,7 @@ import "./Jobs.css";
 import { filterClick } from "../../features/filter";
 const Jobs = () => {
   const [jobs, setJobs] = useState(data);
-  const dispatch = useDispatch([]);
+  const dispatch = useDispatch();
   const filterRole = (role) => {
     setJobs(data.filter((job) => job.role === role));
   };
@@ -14,7 +14,12 @@ const Jobs = () => {
     setJobs(data.filter((job) => job.level === level));
   };
   const filterLanguage = (language) => {
-   data.map((obj) => obj.languages.filter(value => value === language) )
+    setJobs(
+      data.filter((obj) => obj.languages.filter((value) => value === language))
+    );
+  };
+  const filterTools = (tool) => {
+    setJobs(data.filter((obj) => obj.tools.filter((value) => value === tool)));
   };
 
   return (
@@ -55,18 +60,30 @@ const Jobs = () => {
                   dispatch(filterClick(event.target.innerText));
                 }}
               />
-              {job.languages.map((language, index) => (
-                <Button
-                  value={language}
-                  key={index}
-                  changeValue={() => {
-                    filterLanguage(language)
-                  }}
-                />
-              ))}
-              {job.tools.map((tool, index) => (
-                <Button value={tool} key={index} />
-              ))}
+              {job.languages &&
+                job.languages.map((language, index) => (
+                  <div key={index}>
+                    <Button
+                      value={language}
+                      changeValue={(event) => {
+                        filterLanguage(language);
+                        console.log(event.target.innerText);
+                      }}
+                    />
+                  </div>
+                ))}
+              {job.tools &&
+                job.tools.map((tool, index) => (
+                  <div key={index}>
+                    <Button
+                      value={tool}
+                      changeValue={(event) => {
+                        filterTools(tool);
+                        console.log(event.target.innerText);
+                      }}
+                    />
+                  </div>
+                ))}
             </div>
           </section>
         ))}
