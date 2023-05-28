@@ -1,9 +1,9 @@
-import FilteredItems from "../filtered/filteredItems.jsx";
+import Selected from "../selected/Selected";
 import "./Header.css"
 const Header = () => {
     return (
       <header className="container">
-    <FilteredItems/>
+    <Selected/>
       </header>
     );
 }
