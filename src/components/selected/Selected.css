@@ -7,32 +7,40 @@
   position: relative;
   bottom: -50%;
   height: 80px;
-}
-
-.filter-container div {
-  width: 100%;
-  padding: 10px;
-  background-color: transparent;
-  border: none;
-}
-
-.item {
-  background-color: hsl(180, 8%, 52%);
-}
-
-.item button {
-  background-color: hsl(180, 29%, 50%);
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 20px;
 }
 
 .filter-container button {
   background: none;
   border: none;
-  margin-right: 20px;
 }
 
 .filter-values {
   display: flex;
-  gap: 2;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.filter-values .item {
+  background-color: hsl(180, 52%, 96%);
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.filter-values .item button {
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+  cursor: pointer;
+}
+
+.item button:hover, .item button:active {
+  background-color: hsl(180, 14%, 20%);
 }
 
 @media (max-width: 768px) {

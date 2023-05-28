@@ -1,6 +1,8 @@
+import { clearFilter, removeFilter } from "../../features/filter";
 import "./Selected.css";
-import { useSelector } from "react-redux";
+import { useSelector , useDispatch} from "react-redux";
 const Selected = () => {
+  const dispatch = useDispatch()
   let jobs = useSelector((state) => state.filter.myArray);
   console.log(jobs)
 
@@ -9,12 +11,12 @@ const Selected = () => {
       <div className="filter-values">
         {jobs.map((job, index) => (
           <div key={index} className="item">
-            {job}
-            <button>X</button>
+            <p>{job}</p>
+            <button onClick={() => dispatch(removeFilter())}>X</button>
           </div>
         ))}
       </div>
-      <button >Clear</button>
+      <button onClick={() => dispatch(clearFilter())}>Clear</button>
     </div>
   );
 };
