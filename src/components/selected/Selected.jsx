@@ -12,7 +12,7 @@ const Selected = () => {
         {jobs.map((job, index) => (
           <div key={index} className="item">
             <p>{job}</p>
-            <button onClick={() => dispatch(removeFilter())}>X</button>
+            <button onClick={(event) => dispatch(removeFilter(event.target.previousSibling.innerText))}>X</button>
           </div>
         ))}
       </div>
