@@ -47,12 +47,14 @@ h4 {
 .new,
 .featured {
   background-color: $DesaturatedDarkCyan;
-  color: $LightGrayishCyan;
+color: white;
   padding: 5px;
   border-radius: 20px;
   font-size: 14px;
 }
-
+.line{
+  display: none;
+}
 .featured {
   background-color: $VeryDarkGrayishCyan;
 }
@@ -87,5 +89,12 @@ h3 {
     top: -50%;
     left: 5px;
     width: 30%;
+  }
+  .line{
+    display: block;
+    border-top: 1px solid $DarkGrayishCyan;
+    margin-top: 20px;
+    width: 100%;
+    color: $DarkGrayishCyan;
   }
 }

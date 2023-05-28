@@ -43,7 +43,9 @@ const Jobs = () => {
                 </div>
               </div>
             </div>
+           
             <div className="buttons">
+               <div className="line"></div>
               <Button
                 value={job.role}
                 changeValue={(event) => {

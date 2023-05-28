@@ -53,10 +53,14 @@ h4 {
 .new,
 .featured {
   background-color: hsl(180, 29%, 50%);
-  color: hsl(180, 35%, 37%);
+  color: white;
   padding: 5px;
   border-radius: 20px;
   font-size: 14px;
+}
+
+.line {
+  display: none;
 }
 
 .featured {
@@ -95,5 +99,12 @@ h3 {
     top: -50%;
     left: 5px;
     width: 30%;
+  }
+  .line {
+    display: block;
+    border-top: 1px solid hsl(180, 8%, 52%);
+    margin-top: 20px;
+    width: 100%;
+    color: hsl(180, 8%, 52%);
   }
 }/*# sourceMappingURL=Jobs.css.map */
