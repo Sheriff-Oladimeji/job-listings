@@ -14,12 +14,10 @@ const Jobs = () => {
     setJobs(data.filter((job) => job.level === level));
   };
   const filterLanguage = (language) => {
-    setJobs(
-      data.filter((obj) => obj.languages.filter((value) => value === language))
-    );
+    setJobs(data.filter((obj) => obj.languages.includes(language)));
   };
   const filterTools = (tool) => {
-    setJobs(data.filter((obj) => obj.tools.filter((value) => value === tool)));
+    setJobs(data.filter((obj) => obj.tools.includes(tool)));
   };
 
   return (
@@ -67,7 +65,7 @@ const Jobs = () => {
                       value={language}
                       changeValue={(event) => {
                         filterLanguage(language);
-                       dispatch(filterClick(event.target.innerText));
+                        dispatch(filterClick(event.target.innerText));
                       }}
                     />
                   </div>
