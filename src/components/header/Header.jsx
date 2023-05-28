@@ -1,4 +1,4 @@
-import FilteredItems from "../filtered/filteredItems";
+import FilteredItems from "../filtered/filteredItems.jsx";
 import "./Header.css"
 const Header = () => {
     return (
