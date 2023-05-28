@@ -1,4 +1,4 @@
-.filter-values {
+.filter-container {
   width: 80%;
   margin-inline: auto;
   display: flex;
@@ -9,21 +9,34 @@
   height: 80px;
 }
 
-.filter-values div {
+.filter-container div {
   width: 100%;
   padding: 10px;
   background-color: transparent;
   border: none;
 }
 
-.filter-values button {
+.item {
+  background-color: hsl(180, 8%, 52%);
+}
+
+.item button {
+  background-color: hsl(180, 29%, 50%);
+}
+
+.filter-container button {
   background: none;
   border: none;
   margin-right: 20px;
 }
 
+.filter-values {
+  display: flex;
+  gap: 2;
+}
+
 @media (max-width: 768px) {
-  .filter-values {
+  .filter-container {
     width: 90%;
     align-items: center;
     background: white;
