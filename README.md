@@ -47,6 +47,7 @@ Users should be able to:
 - Saas
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+-  Redux toolkit 
 
 
 ### What I learned
